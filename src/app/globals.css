@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.ant-select-selector {
+  background-color: #f9f9f9 !important;
+  border-radius: 20px !important;
+}
