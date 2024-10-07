@@ -1,87 +1,90 @@
 "use client";
-import React from 'react'
-import Heading from '@/ui/shared/Heading';
-import { Form, Input } from 'antd';
-import FormItem from "@/ui/shared/FormItem";
+import React from "react";
+import { Form, Input } from "antd"; // Assuming you're using Ant Design for form elements
+import Title from "@/ui/shared/Title"; // Import your Title component
 
-const ContactClient = () => {
-    return (
-        <div>
-            <Heading 
-                name="Contact Us" 
-                style="font-bold uppercase text-center sm:text-[32px] text-[20px] leading-[38px] sm:leading-[46px] text-[#333333] mb-4"  
-            />
+const ContractClient = () => {
+  return (
+    <div className="container mx-auto my-10">
+      <Title
+        title="Contact Us"
+        subtitle="We're here to help! Please fill out the form below."
+      />
 
-            <h2 className='text-center text-[20px] leading-[38px]'>Don&apos;t hesitate to contact us! We will get back to you as soon as we can. In the meantime, we drink to your health!</h2>
+      <div className="flex flex-col md:flex-row gap-10">
+        {/* Contact Form */}
+        <div className="flex-1 bg-white p-6 rounded-lg shadow-lg">
+          <h2 className="text-2xl text-primary font-semibold mb-4">
+            Get in Touch
+          </h2>
+          <Form layout="vertical">
+            <Form.Item
+              label="First Name"
+              name="firstName"
+              rules={[
+                { required: true, message: "Please enter your first name!" },
+              ]}
+            >
+              <Input placeholder="Enter your first name" />
+            </Form.Item>
 
-            <div className='flex justify-between gap-10 mt-20'>
-                <div className='w-full'>
-                    <h1 className='font-semibold mb-6 text-[20px]'>CONTACT FORM</h1>
+            <Form.Item
+              label="Last Name"
+              name="lastName"
+              rules={[
+                { required: true, message: "Please enter your last name!" },
+              ]}
+            >
+              <Input placeholder="Enter your last name" />
+            </Form.Item>
 
-                    <Form layout='vertical' className='grid grid-cols-12 gap-x-6'>
-                        <FormItem style='col-span-6' name='firstName' label='First Name'  />
-                        <FormItem style='col-span-6' name='lastName' label='Last Name'  />
-                        <FormItem style='col-span-6' name='email' label='Email'  />
-                        <FormItem style='col-span-6' name='subject' label='Subject'  />
-                        <Form.Item
-                            name="message"
-                            label={<p>Message</p>}
-                            rules={[
-                                {
-                                    required: true,
-                                    message: `Please Enter Message`
-                                }
-                            ]}
-                            className='col-span-12'
-                        >
-                            <Input.TextArea
-                                placeholder={`Enter Message`}
-                                style={{
-                                    width: "100%",
-                                    height: 150,
-                                    boxShadow: "none",
-                                    outline: "none",
-                                    border: "1px solid #E0E0E0",
-                                    borderRadius: 6,
-                                    resize: "none",
-                                    background: "#FEFEFE",
-                                    fontFamily: 'Poppins, sans-serif'
-                                }}
-                                className=' placeholder:text-[#A2A3B1] placeholder:text-[14.4px] placeholder:leading-6 font-normal'
-                            />
-                        </Form.Item>
-                        
-                        <Form.Item
-                            className='col-span-12 w-full flex items-center justify-center'
-                        >
-                            <button 
-                                type='submit'
-                                className='
-                                    bg-primary 
-                                    border-none outline-none 
-                                    shadow-none w-[200px] h-10 px-4 
-                                    rounded-md text-[16px] 
-                                    font-medium text-white
-                                '
-                            >
-                                Submit
-                            </button>
-                        </Form.Item>
-                    </Form>
+            <Form.Item
+              label="Email"
+              name="email"
+              rules={[{ required: true, message: "Please enter your email!" }]}
+            >
+              <Input type="email" placeholder="Enter your email" />
+            </Form.Item>
 
-                </div>
-                <div className='w-fit'>
-                    <h1 className='uppercase font-semibold mb-6 text-[20px]'>information&apos;s</h1>
-                    <h3 className='font-bold text-[18px]'>Cove Valley</h3>
-                    <p className='whitespace-nowrap'>1910, Avenue du Sanctuaire</p>
-                    <p>Quebec (Quebec) G1E 3L2</p>
+            <Form.Item
+              label="Message"
+              name="message"
+              rules={[
+                { required: true, message: "Please enter your message!" },
+              ]}
+            >
+              <Input.TextArea placeholder="Enter your message" rows={4} />
+            </Form.Item>
 
-                    <h3 className='font-bold text-[18px] mt-6'>Telephone</h3>
-                    <p>1 418 663-7477</p>
-                </div>
-            </div>
+            <Form.Item>
+              <button
+                type="submit"
+                className="bg-primary text-white rounded-md px-4 py-2"
+              >
+                Send Message
+              </button>
+            </Form.Item>
+          </Form>
         </div>
-    )
-}
 
-export default ContactClient
+        {/* Contact Information */}
+        <div className="w-full md:w-1/3 bg-white p-6 rounded-lg shadow-lg">
+          <h2 className="text-2xl font-semibold mb-4">Contact Information</h2>
+          <p className="text-gray-700 mb-2">
+            <strong>Cove Valley</strong>
+          </p>
+          <p className="text-gray-600">1910, Avenue du Sanctuaire</p>
+          <p className="text-gray-600">Quebec (Quebec) G1E 3L2</p>
+          <p className="text-gray-600 mt-4">
+            <strong>Telephone:</strong> 1 418 663-7477
+          </p>
+          <p className="text-gray-600">
+            <strong>Email:</strong> contact@covevalley.com
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ContractClient;

@@ -1,13 +1,19 @@
 "use client";
+import BestDeal from "@/ui/Website/home/BestDeal";
+import Blogs from "@/ui/Website/home/Blogs";
 import HeroSection from "@/ui/Website/home/HeroSection";
-// import Faq from '@/ui/Faq';
+import IngredientsSection from "@/ui/Website/home/OurIngredient";
+import OurProduct from "@/ui/Website/home/OurProduct";
 import React from "react";
 
 const HomeClient = () => {
   return (
     <div>
       <HeroSection />
-      {/* <Faq/> */}
+      <BestDeal />
+      <OurProduct />
+      <IngredientsSection />
+      <Blogs />
     </div>
   );
 };

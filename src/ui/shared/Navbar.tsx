@@ -39,6 +39,10 @@ const Navbar = () => {
       path: "/",
     },
     {
+      label: "Products",
+      path: "/all-products",
+    },
+    {
       label: "Statement",
       path: "/statement",
     },
@@ -53,7 +57,7 @@ const Navbar = () => {
       className={`
 
         
-                sticky z-10  top-0 w-full font-semibold left-0 transition-all duration-200
+                sticky z-[999]  top-0 w-full font-medium left-0 transition-all duration-200
                 bg-secondary 
             `}
     >
@@ -72,7 +76,7 @@ const Navbar = () => {
 
                                         ${
                                           menu.path === pathName
-                                            ? "bg-quaternary font-semibold"
+                                            ? "bg-primary font-medium"
                                             : ""
                                         }
                                     `}

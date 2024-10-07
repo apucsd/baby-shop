@@ -19,7 +19,7 @@ const config: Config = {
         primary: "#28948D",
         secondary: "#A5DFD5",
         tertiary: "#F4DCD5",
-        quaternary: "#28948D",
+        quaternary: "#000000",
       },
     },
   },

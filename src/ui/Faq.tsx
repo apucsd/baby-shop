@@ -1,36 +1,53 @@
-import Heading from "@/ui/shared/Heading";
+"use client";
 import React from "react";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { Collapse, theme } from "antd";
+import Title from "./shared/Title";
 
 const Faq = () => {
   const getItems = (panelStyle: any) => [
     {
       key: "1",
-      label: (
-        <p className="text-[16px] font-medium">
-          What age range is your baby food suitable for?
-        </p>
-      ),
+      label: <p className="text-[16px] font-medium">How do I use the cubes?</p>,
       children: (
-        <p>
-          Our baby food is designed for infants and toddlers from 6 months to 3
-          years old. We offer a variety of textures and flavors to match each
-          stage of your baby&apos;s development.
-        </p>
+        <div>
+          <p>
+            Our frozen baby food cubes are designed to make mealtime simple and
+            stress-free. Just pop out the desired number of cubes and:
+          </p>
+          <ul className="list-disc list-inside">
+            <li>
+              Thaw in the fridge: Let them thaw in the refrigerator for a few
+              hours or overnight.
+            </li>
+            <li>
+              Warm up: You can gently warm the cubes on the stovetop or
+              microwave until they reach the desired temperature. Be sure to
+              stir and check for hot spots before serving.
+            </li>
+            <li>
+              Mix and match: Feel free to combine different cubes for varied and
+              balanced meals.
+            </li>
+          </ul>
+        </div>
       ),
       style: panelStyle,
     },
     {
       key: "2",
       label: (
-        <p className="text-[16px] font-medium">Are your products organic?</p>
+        <p className="text-[16px] font-medium">
+          Are the products allergen-free?
+        </p>
       ),
       children: (
         <p>
-          Yes, all our baby food products are made from 100% organic, non-GMO
-          ingredients. We prioritize fresh, pesticide-free fruits, vegetables,
-          and grains to ensure the best nutrition for your baby.
+          We prioritize using simple, whole ingredients in our cubes, and we
+          take care to avoid common allergens. However, we recommend checking
+          the ingredient lists carefully for any potential sensitivities. If you
+          have specific concerns, please reach out to us directly for more
+          information about allergens.
         </p>
       ),
       style: panelStyle,
@@ -39,14 +56,16 @@ const Faq = () => {
       key: "3",
       label: (
         <p className="text-[16px] font-medium">
-          How do you ensure the safety of your baby food?
+          Where do you source your ingredients?
         </p>
       ),
       children: (
         <p>
-          We follow strict safety protocols, including high-quality sourcing,
-          proper hygiene, and regular lab testing for harmful substances to
-          ensure our baby food meets the highest safety standards.
+          At Cove Valley, we source our ingredients from trusted, certified
+          organic farms. We work closely with local and sustainable farmers to
+          ensure our fruits and vegetables are grown without pesticides or
+          harmful chemicals. Our farm-to-table approach ensures that your baby
+          gets the freshest, most nutritious produce available.
         </p>
       ),
       style: panelStyle,
@@ -55,14 +74,16 @@ const Faq = () => {
       key: "4",
       label: (
         <p className="text-[16px] font-medium">
-          Do you offer allergy-friendly options?
+          What makes frozen baby food better?
         </p>
       ),
       children: (
         <p>
-          Yes, we offer a range of allergy-friendly options that exclude common
-          allergens such as dairy, nuts, and gluten. Please check the product
-          descriptions for details on allergens.
+          Freezing is a natural way to preserve the nutrients, flavour, and
+          freshness of our organic ingredients. We flash-freeze our purees at
+          peak freshness, locking in essential vitamins and minerals without the
+          need for preservatives. This ensures that your baby is getting
+          wholesome, nutrient-dense food in every cube.
         </p>
       ),
       style: panelStyle,
@@ -71,14 +92,76 @@ const Faq = () => {
       key: "5",
       label: (
         <p className="text-[16px] font-medium">
-          How should I store the baby food?
+          How long can I store the cubes?
         </p>
       ),
       children: (
         <p>
-          Our baby food should be stored in a cool, dry place. Once opened, it
-          should be refrigerated and consumed within 24-48 hours, depending on
-          the product.
+          Our baby food cubes can be stored in the freezer for up to 3 months.
+          To ensure the best taste and quality, we recommend using them within
+          this timeframe.
+        </p>
+      ),
+      style: panelStyle,
+    },
+    {
+      key: "6",
+      label: (
+        <p className="text-[16px] font-medium">
+          How many cubes should I use per meal?
+        </p>
+      ),
+      children: (
+        <p>
+          Each cube is perfectly portioned for convenience. For younger babies,
+          you may only need one or two cubes per meal, while older babies with
+          larger appetites may require more. You can easily adjust based on your
+          baby’s needs.
+        </p>
+      ),
+      style: panelStyle,
+    },
+    {
+      key: "7",
+      label: (
+        <p className="text-[16px] font-medium">
+          Do your cubes contain any additives or preservatives?
+        </p>
+      ),
+      children: (
+        <p>
+          No, our cubes are made from only a few simple, organic ingredients. We
+          never use additives, preservatives, or fillers, so you can feel
+          confident that your baby is getting pure, wholesome food.
+        </p>
+      ),
+      style: panelStyle,
+    },
+    {
+      key: "8",
+      label: (
+        <p className="text-[16px] font-medium">Are your products organic?</p>
+      ),
+      children: (
+        <p>
+          Yes, all of our ingredients are organic, ensuring that every cube is
+          free from harmful chemicals.
+        </p>
+      ),
+      style: panelStyle,
+    },
+    {
+      key: "9",
+      label: (
+        <p className="text-[16px] font-medium">
+          Can I mix the cubes with other foods?
+        </p>
+      ),
+      children: (
+        <p>
+          Absolutely! You can easily mix our cubes with other foods like
+          oatmeal, yogurt, or grains to create a balanced and varied meal for
+          your baby.
         </p>
       ),
       style: panelStyle,
@@ -93,12 +176,11 @@ const Faq = () => {
   };
 
   return (
-    <div>
-      <Heading
-        name="Frequently Asked Question"
-        style="font-bold text-center sm:text-[32px] text-[20px] leading-[38px] sm:leading-[46px] text-[#333333] mb-4"
+    <div className="container">
+      <Title
+        title="Frequently Asked Questions"
+        subtitle="Find answers to the most common questions about our baby food products"
       />
-
       <div className="mt-8">
         <Collapse
           bordered={false}
