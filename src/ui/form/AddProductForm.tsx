@@ -23,8 +23,8 @@ const AddProductForm = ({ onFinish }: { onFinish: (values: any) => void }) => {
         theme={{
           components: {
             Upload: {
-              colorPrimary: "#1E412A",
-              colorBorder: "#1E412A",
+              colorPrimary: "#28948D",
+              colorBorder: "#28948D",
             },
           },
         }}
@@ -107,8 +107,8 @@ const AddProductForm = ({ onFinish }: { onFinish: (values: any) => void }) => {
         theme={{
           components: {
             Checkbox: {
-              colorPrimary: "#1E412A",
-              colorPrimaryHover: "#1E412A",
+              colorPrimary: "#28948D",
+              colorPrimaryHover: "#28948D",
             },
           },
         }}
@@ -125,7 +125,7 @@ const AddProductForm = ({ onFinish }: { onFinish: (values: any) => void }) => {
           style={{
             width: "100%",
             height: 42,
-            background: "#1E412A",
+            background: "#28948D",
             color: "#ffffff",
           }}
           type="primary"

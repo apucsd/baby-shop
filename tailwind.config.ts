@@ -11,15 +11,15 @@ const config: Config = {
       center: true,
       padding: "20px",
       screens: {
-        "2xl": "1440px",
-      }
+        "2xl": "1400px",
+      },
     },
     extend: {
       colors: {
-        primary: "#1E412A",
-        secondary: "#ECA2A4",
+        primary: "#28948D",
+        secondary: "#A5DFD5",
         tertiary: "#F4DCD5",
-        quaternary: "#D05A4E",
+        quaternary: "#28948D",
       },
     },
   },

@@ -1,13 +1,15 @@
 "use client";
-import Faq from '@/ui/Faq';
-import React from 'react';
+import HeroSection from "@/ui/Website/home/HeroSection";
+// import Faq from '@/ui/Faq';
+import React from "react";
 
 const HomeClient = () => {
-    return (
-        <div>
-            <Faq/>
-        </div>
-    )
-}
+  return (
+    <div>
+      <HeroSection />
+      {/* <Faq/> */}
+    </div>
+  );
+};
 
-export default HomeClient
+export default HomeClient;

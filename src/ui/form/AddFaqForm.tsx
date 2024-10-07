@@ -44,7 +44,7 @@ const AddFaqForm = ({ onFinish }: { onFinish: (values: any) => void }) => {
           style={{
             width: "100%",
             height: 42,
-            background: "#1E412A",
+            background: "#28948D",
             color: "#ffffff",
           }}
           type="primary"

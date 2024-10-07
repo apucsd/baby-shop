@@ -65,7 +65,7 @@ const Sidebar = () => {
             style={
               selectedKey === item.key
                 ? {
-                    backgroundColor: "#1E412A",
+                    backgroundColor: "#28948D",
                     height: 42,
                     color: "white",
                     marginBottom: "8px",

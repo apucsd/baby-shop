@@ -96,7 +96,7 @@ const ProductPage = () => {
         <div>
           <Title
             style={{
-              color: "#1E412A",
+              color: "#28948D",
             }}
             level={2}
           >
@@ -114,7 +114,7 @@ const ProductPage = () => {
             style={{
               width: 150,
               height: 42,
-              background: "#1E412A",
+              background: "#28948D",
               color: "#ffffff",
             }}
             type="primary"
@@ -129,7 +129,7 @@ const ProductPage = () => {
         theme={{
           components: {
             Table: {
-              headerBg: "#1E412A",
+              headerBg: "#28948D",
               headerColor: "#ffffff",
               headerBorderRadius: 0,
             },

@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import dynamic from "next/dynamic";
-import { Cuprum } from "next/font/google";
+import { Barlow_Condensed } from "next/font/google";
 
-const cuprum = Cuprum({
+const barlow_condensed = Barlow_Condensed({
   weight: "400",
   subsets: ["latin"],
 });
@@ -24,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cuprum.className}>
+      <body className={barlow_condensed.className}>
         <ClientProvider>{children}</ClientProvider>
       </body>
     </html>

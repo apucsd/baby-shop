@@ -34,7 +34,7 @@ const FaqPage = () => {
         <div>
           <Title
             style={{
-              color: "#1E412A",
+              color: "#28948D",
             }}
             level={2}
           >
@@ -52,7 +52,7 @@ const FaqPage = () => {
             style={{
               width: 150,
               height: 42,
-              background: "#1E412A",
+              background: "#28948D",
               color: "#ffffff",
             }}
             type="primary"

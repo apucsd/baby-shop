@@ -31,7 +31,7 @@ const AboutPage = () => {
             style={{
               width: 200,
               height: 42,
-              background: "#1E412A",
+              background: "#28948D",
               color: "#ffffff",
             }}
             type="primary"

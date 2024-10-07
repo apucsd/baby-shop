@@ -7,6 +7,7 @@ import Link from "next/link";
 import { Drawer } from "antd";
 import { Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
+import { AiOutlineUser } from "react-icons/ai";
 
 const Navbar = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
@@ -45,40 +46,29 @@ const Navbar = () => {
       label: "Story",
       path: "/story",
     },
-    {
-      label: "Dashboard",
-      path: "/dashboard/products",
-    },
   ];
 
   return (
     <div
       className={`
-                sticky z-10 top-0 w-full left-0 transition-all duration-200
-                bg-primary 
+
+        
+                sticky z-10  top-0 w-full font-semibold left-0 transition-all duration-200
+                bg-secondary 
             `}
     >
-      <div className="container relative  flex items-center justify-between h-20">
-        {/* logo */}
-        <Link href={"/"}>
-          <Image
-            alt="Logo"
-            src={Logo}
-            width={164}
-            height={70}
-            className="brightness-0 invert"
-          />
-        </Link>
-
-        {/* routes container */}
+      <div className="container relative  flex items-center justify-between h-[80px]">
         <div className="hidden  sm:flex items-center gap-6">
           {item.map((menu, index) => {
             return (
               <Link
                 key={index}
                 className={`
+
+
+                  hover:bg-primary duration-300 rounded-s-full rounded-r-full px-4 py-1
                                         w-fit text-[16px] leading-5 
-                                        text-white px-4 py-2 rounded-[30px]
+                                        text-white 
 
                                         ${
                                           menu.path === pathName
@@ -92,6 +82,31 @@ const Navbar = () => {
               </Link>
             );
           })}
+        </div>
+        <Link href={"/"}>
+          <Image
+            alt="Logo"
+            src={Logo}
+            width={164}
+            height={80}
+            className="brightness-0 invert h-[50px]"
+          />
+        </Link>
+        <div className="flex items-center">
+          <Link
+            className="flex items-center hover:bg-primary duration-300 rounded-s-full rounded-r-full px-4 py-1 text-white  gap-2"
+            href={"/account"}
+          >
+            {/* ? This need to be changed */}
+            <AiOutlineUser size={20} />
+            <span>Account</span>
+          </Link>
+          <Link
+            className="flex items-center hover:bg-primary duration-300 rounded-s-full rounded-r-full px-4 py-1 text-white  gap-2"
+            href={"/dashboard/products"}
+          >
+            <span>Dashboard</span>
+          </Link>
         </div>
 
         <div className="block sm:hidden">
