@@ -99,7 +99,7 @@ const Navbar = () => {
         <div className="flex items-center">
           <Link
             className="flex items-center hover:bg-primary duration-300 rounded-s-full rounded-r-full px-4 py-1 text-white  gap-2"
-            href={"/account"}
+            href={"/login"}
           >
             {/* ? This need to be changed */}
             <AiOutlineUser size={20} />

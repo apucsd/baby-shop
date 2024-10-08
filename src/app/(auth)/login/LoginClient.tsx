@@ -19,7 +19,7 @@ const LoginClient = () => {
   };
 
   return (
-    <div className="border border-primary p-8">
+    <div className="border border-primary p-8 md:w-[600px]">
       <Heading
         name="Log in to your account"
         style="font-semibold text-[24px] leading-[32px] text-[#333333] text-center mb-6"
