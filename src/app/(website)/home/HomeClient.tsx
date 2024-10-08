@@ -4,6 +4,7 @@ import Blogs from "@/ui/Website/home/Blogs";
 import HeroSection from "@/ui/Website/home/HeroSection";
 import IngredientsSection from "@/ui/Website/home/OurIngredient";
 import OurProduct from "@/ui/Website/home/OurProduct";
+// import SustainabilityAndPackaging from "@/ui/Website/home/Packaging";
 import React from "react";
 
 const HomeClient = () => {
@@ -13,6 +14,7 @@ const HomeClient = () => {
       <BestDeal />
       <OurProduct />
       <IngredientsSection />
+      {/* <SustainabilityAndPackaging /> */}
       <Blogs />
     </div>
   );

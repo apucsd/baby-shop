@@ -6,3 +6,6 @@
   background-color: #f9f9f9 !important;
   border-radius: 20px !important;
 }
+.ant-image-mask-info {
+  display: none !important;
+}
