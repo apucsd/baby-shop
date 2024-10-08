@@ -3,11 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import Logo from "@/assets/logo.png";
-import Heading from "./Heading";
+// import Heading from "./Heading";
 import facebook from "@/assets/facebook.png";
 import instagram from "@/assets/instagram.png";
 import linkedin from "@/assets/linkedin.png";
 import twitter from "@/assets/twitter.png";
+import Heading from "./Heading";
 
 const Footer = () => {
   const item = [

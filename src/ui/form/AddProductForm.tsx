@@ -1,122 +1,129 @@
-"use client";
 import React from "react";
-import { Form, Input } from "antd";
-import Title from "@/ui/shared/Title";
-
-const ContactClient = () => {
+import {
+  Form,
+  Input,
+  Button,
+  Select,
+  InputNumber,
+  Checkbox,
+  ConfigProvider,
+  Upload,
+} from "antd";
+const { TextArea } = Input;
+const { Option } = Select;
+const AddProductForm = ({ onFinish }: { onFinish: (values: any) => void }) => {
+  const [form] = Form.useForm();
   return (
-    <div className="container my-10">
-      <Title
-        title="Contact Us"
-        subtitle="Don't hesitate to contact us! We will get back to you as soon as we can. In the meantime, we drink to your health!"
-      />
-
-      <div className="flex justify-between gap-10 mt-20">
-        <div className="w-full">
-          <h1 className="font-semibold mb-6 text-[20px]">CONTACT FORM</h1>
-
-          <Form layout="vertical" className="grid grid-cols-12 gap-x-6">
-            {/* First Name */}
-            <Form.Item
-              label="First Name"
-              name="firstName"
-              rules={[
-                { required: true, message: "Please enter your first name" },
-              ]}
-              className="col-span-6"
-            >
-              <Input placeholder="Enter your first name" />
-            </Form.Item>
-
-            {/* Last Name */}
-            <Form.Item
-              label="Last Name"
-              name="lastName"
-              rules={[
-                { required: true, message: "Please enter your last name" },
-              ]}
-              className="col-span-6"
-            >
-              <Input placeholder="Enter your last name" />
-            </Form.Item>
-
-            {/* Email */}
-            <Form.Item
-              label="Email"
-              name="email"
-              rules={[
-                { required: true, message: "Please enter your email" },
-                {
-                  type: "email",
-                  message: "Please enter a valid email address",
-                },
-              ]}
-              className="col-span-6"
-            >
-              <Input placeholder="Enter your email" />
-            </Form.Item>
-
-            {/* Subject */}
-            <Form.Item
-              label="Subject"
-              name="subject"
-              rules={[{ required: true, message: "Please enter the subject" }]}
-              className="col-span-6"
-            >
-              <Input placeholder="Enter subject" />
-            </Form.Item>
-
-            {/* Message */}
-            <Form.Item
-              label="Message"
-              name="message"
-              rules={[{ required: true, message: "Please enter a message" }]}
-              className="col-span-12"
-            >
-              <Input.TextArea
-                placeholder="Enter your message"
-                style={{
-                  width: "100%",
-                  height: 150,
-                  boxShadow: "none",
-                  outline: "none",
-                  border: "1px solid #E0E0E0",
-                  borderRadius: 6,
-                  resize: "none",
-                  background: "#FEFEFE",
-                  fontFamily: "Poppins, sans-serif",
-                }}
-                className=" placeholder:text-[#A2A3B1] placeholder:text-[14.4px] placeholder:leading-6 font-normal"
-              />
-            </Form.Item>
-
-            {/* Submit Button */}
-            <Form.Item className="col-span-12 w-full flex items-center justify-center">
-              <button
-                type="submit"
-                className="bg-primary border-none outline-none shadow-none w-[200px] h-10 px-4 rounded-md text-[16px] font-medium text-white"
-              >
-                Submit
-              </button>
-            </Form.Item>
-          </Form>
-        </div>
-
-        {/* Contact Information */}
-        <div className="w-fit">
-          <h1 className="uppercase font-semibold mb-6 text-[20px]">
-            information&apos;s
-          </h1>
-          <h3 className="font-bold text-[18px]">Cove Valley</h3>
-          <p className="whitespace-nowrap">1910, Avenue du Sanctuaire</p>
-          <p>Quebec (Quebec) G1E 3L2</p>
-
-          <h3 className="font-bold text-[18px] mt-6">Telephone</h3>
-          <p>1 418 663-7477</p>
-        </div>
+    <Form form={form} layout="vertical" onFinish={onFinish}>
+      {/* Product Name */}
+      <ConfigProvider
+        theme={{
+          components: {
+            Upload: {
+              colorPrimary: "#1E412A",
+              colorBorder: "#1E412A",
+            },
+          },
+        }}
+      >
+        <Form.Item
+          label="Image"
+          name="productImage"
+          rules={[{ required: true, message: "Please upload a product image" }]}
+        >
+          <Upload listType="picture-card">Upload</Upload>
+        </Form.Item>
+      </ConfigProvider>
+      <Form.Item
+        label="Product Name"
+        name="productName"
+        rules={[{ required: true, message: "Please enter the product name" }]}
+      >
+        <Input placeholder="Enter product name" />
+      </Form.Item>
+      <div className="grid md:grid-cols-2 gap-3">
+        <Form.Item
+          label="Price ($)"
+          name="price"
+          rules={[
+            { required: true, message: "Please enter the product price" },
+            {
+              type: "number",
+              min: 0,
+              message: "The price must be a positive number",
+            },
+          ]}
+        >
+          <InputNumber
+            type="number"
+            min={0}
+            placeholder="Enter product price"
+            style={{
+              width: "100%",
+            }}
+          />
+        </Form.Item>
+        {/* Category */}
+        <Form.Item
+          label="Category"
+          name="category"
+          rules={[{ required: true, message: "Please select a category" }]}
+        >
+          <Select placeholder="Select a category">
+            <Option value="diapers">Diapers</Option>
+            <Option value="skin-care">Skin Care</Option>
+            <Option value="toys">Toys</Option>
+            <Option value="baby-gear">Baby Gear</Option>
+          </Select>
+        </Form.Item>
       </div>
-    </div>
+      {/* Description */}
+      <Form.Item
+        label="Description"
+        name="description"
+        rules={[
+          { required: true, message: "Please enter a product description" },
+        ]}
+      >
+        <TextArea
+          style={{
+            width: "100%",
+            resize: "none",
+            borderRadius: 6,
+            backgroundColor: "#F9F9F9",
+          }}
+          rows={3}
+          placeholder="Enter product description"
+        />
+      </Form.Item>
+      <ConfigProvider
+        theme={{
+          components: {
+            Checkbox: {
+              colorPrimary: "#28948D",
+              colorPrimaryHover: "#28948D",
+            },
+          },
+        }}
+      >
+        <Form.Item name="stock" valuePropName="checked">
+          <Checkbox style={{ width: "100%" }}>Available in Stock</Checkbox>
+        </Form.Item>
+      </ConfigProvider>
+      {/* Submit Button */}
+      <Form.Item>
+        <Button
+          htmlType="submit"
+          style={{
+            width: "100%",
+            height: 42,
+          }}
+          type="primary"
+        >
+          Add Product
+        </Button>
+      </Form.Item>
+    </Form>
   );
 };
-
-export default ContactClient;
+export default AddProductForm;

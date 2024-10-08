@@ -27,7 +27,7 @@ const BlogDetails = () => {
     <div className="container mx-auto my-10">
       <div className="flex flex-col lg:flex-row gap-10">
         {/* Main Content */}
-        <div className="flex-1 bg-white p-5 rounded-lg shadow-lg">
+        <div className="flex-1  p-5 rounded-lg ">
           <Image
             src={blogPost.image}
             alt={blogPost.title}
@@ -51,7 +51,7 @@ const BlogDetails = () => {
         </div>
 
         {/* Sidebar (optional) */}
-        <div className="w-full lg:w-1/3 bg-white p-5 rounded-lg shadow-lg">
+        <div className="w-full lg:w-1/3  p-5 rounded-lg">
           <h2 className="text-lg font-semibold text-primary mb-4">
             Related Posts
           </h2>

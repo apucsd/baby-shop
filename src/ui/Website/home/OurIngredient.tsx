@@ -26,7 +26,7 @@ const IngredientsSection = () => {
               </h1>
               <p className="text-[#878787]">
                 A creamy blend that offers plant-based protein, fiber, and
-                natural energy to support your baby's growth.
+                natural energy to support your baby s growth.
               </p>
             </div>
           </div>
