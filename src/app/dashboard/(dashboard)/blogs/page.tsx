@@ -22,28 +22,32 @@ const blogData = [
     title: "The Benefits of Organic Baby Food",
     author: "Cove Valley Organics",
     date: "2024-07-15",
-    imageUrl: "https://example.com/image2.jpg", // Replace with actual image URL
+    imageUrl:
+      "https://blog.pamperedchef.ca/wp-content/uploads/2020/05/featured-baby-food.jpg",
   },
   {
     id: 3,
     title: "Healthy Feeding Tips for Toddlers",
     author: "Nutrition Expert",
     date: "2024-06-20",
-    imageUrl: "https://example.com/image3.jpg", // Replace with actual image URL
+    imageUrl:
+      "https://blog.pamperedchef.ca/wp-content/uploads/2020/05/featured-baby-food.jpg",
   },
   {
     id: 4,
     title: "Introducing Solids: A Parent's Guide",
     author: "Parenting Tips",
     date: "2024-05-10",
-    imageUrl: "https://example.com/image4.jpg", // Replace with actual image URL
+    imageUrl:
+      "https://blog.pamperedchef.ca/wp-content/uploads/2020/05/featured-baby-food.jpg",
   },
   {
     id: 5,
     title: "Understanding Baby Nutrition: Key Facts",
     author: "Health Guru",
     date: "2024-04-25",
-    imageUrl: "https://example.com/image5.jpg", // Replace with actual image URL
+    imageUrl:
+      "https://blog.pamperedchef.ca/wp-content/uploads/2020/05/featured-baby-food.jpg",
   },
 ];
 

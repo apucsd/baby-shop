@@ -37,7 +37,7 @@ const Sidebar = () => {
       link: "/dashboard/statement",
     },
     {
-      key: "/dashboard/Blogs",
+      key: "/dashboard/blogs",
       icon: <Newspaper size={24} />,
       label: "Blogs",
       link: "/dashboard/blogs",
