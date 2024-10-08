@@ -13,7 +13,7 @@ const ContractClient = () => {
 
       <div className="flex flex-col md:flex-row gap-10">
         {/* Contact Form */}
-        <div className="flex-1 bg-white p-6 rounded-lg shadow-lg">
+        <div className="flex-1 bg-white p-6 rounded-lg ">
           <h2 className="text-2xl text-primary font-semibold mb-4">
             Get in Touch
           </h2>
@@ -53,7 +53,7 @@ const ContractClient = () => {
                 { required: true, message: "Please enter your message!" },
               ]}
             >
-              <Input.TextArea placeholder="Enter your message" rows={4} />
+              <Input.TextArea placeholder="Enter your message" rows={3} />
             </Form.Item>
 
             <Form.Item>
@@ -68,7 +68,7 @@ const ContractClient = () => {
         </div>
 
         {/* Contact Information */}
-        <div className="w-full md:w-1/3 bg-white p-6 rounded-lg shadow-lg">
+        <div className="w-full md:w-1/3 bg-white p-6 rounded-lg ">
           <h2 className="text-2xl font-semibold mb-4">Contact Information</h2>
           <p className="text-gray-700 mb-2">
             <strong>Cove Valley</strong>

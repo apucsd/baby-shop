@@ -17,7 +17,7 @@ const OtpVerifyClient = () => {
   };
 
   return (
-    <div>
+    <div className="border border-primary p-8">
       <Heading
         name="Verification code"
         style="font-semibold text-[24px] leading-[32px] text-[#333333] text-center mb-6"
@@ -72,10 +72,11 @@ const OtpVerifyClient = () => {
         >
           <Button
             htmlType="submit"
+            type="primary"
             style={{
               width: 150,
-              height: 50,
-              background: "#00809E",
+              height: 42,
+
               color: "#ffffff",
             }}
           >

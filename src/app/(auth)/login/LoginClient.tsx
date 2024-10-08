@@ -5,6 +5,7 @@ import Link from "next/link";
 import React from "react";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
+import Heading from "@/ui/shared/Heading";
 
 const LoginClient = () => {
   const [form] = Form.useForm();
@@ -13,12 +14,16 @@ const LoginClient = () => {
 
   const handleSubmit = async (values: any) => {
     router.push("/");
+    console.log(values);
     toast.success("Logged In Successfully");
   };
 
   return (
-    <div>
-      {/* <Heading name='Log in to your account' style='font-semibold text-[24px] leading-[32px] text-[#333333] text-center mb-6' /> */}
+    <div className="border border-primary p-8">
+      <Heading
+        name="Log in to your account"
+        style="font-semibold text-[24px] leading-[32px] text-[#333333] text-center mb-6"
+      />
       <p className="font-normal text-[14px] leading-[14px] text-[#5C5C5C] text-center mb-6">
         Please enter your email and password to continue
       </p>
@@ -107,11 +112,12 @@ const LoginClient = () => {
           }}
         >
           <Button
+            type="primary"
             htmlType="submit"
             style={{
               width: 150,
-              height: 50,
-              background: "#00809E",
+              height: 42,
+              // background: "#00809E",
               color: "#ffffff",
             }}
           >

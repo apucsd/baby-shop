@@ -1,10 +1,10 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Button } from "antd";
-import JoditEditor from "jodit-react";
+import dynamic from "next/dynamic";
 import React, { useState } from "react";
 import { AiOutlinePlus } from "react-icons/ai";
-
+const JoditEditor = dynamic(() => import("jodit-react"), { ssr: false });
 const Stories = () => {
   const [content, setContent] = useState("");
   const config = {

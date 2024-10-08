@@ -9,6 +9,7 @@ import ProductBack from "@/assets/product-back.png";
 import Image from "next/image";
 import SwiperButton from "@/ui/shared/SwiperButton";
 import Title from "@/ui/shared/Title";
+import Link from "next/link";
 const BestDeal = () => {
   return (
     <div className="container my-20">
@@ -57,14 +58,17 @@ const BestDeal = () => {
                     </div>
 
                     {/* Button container */}
-                    <div className="flex transition-all duration-300 opacity-0 group-hover:opacity-100 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[99] items-center justify-center rounded-full bg-white p-2">
+                    <Link
+                      href={`all-products/details/${1}`}
+                      className="flex transition-all duration-300 opacity-0 group-hover:opacity-100 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[99] items-center justify-center rounded-full bg-white p-2"
+                    >
                       <button>
                         <FaEye
                           size={20}
                           className="text-primary rounded-full"
                         />
                       </button>
-                    </div>
+                    </Link>
                   </div>
                   <div className="w-[400px] text-center mx-auto">
                     <h1 className="font-semibold text-quaternary text-2xl my-4">

@@ -7,7 +7,7 @@ import { AiOutlineShareAlt } from "react-icons/ai";
 import { FaAppleAlt, FaClock, FaLeaf } from "react-icons/fa";
 const HeroSection = () => {
   return (
-    <div className="bg-secondary py-20 min-h-[80vh]">
+    <div className="bg-secondary py-20 min-h-[80vh] relative">
       <div className="container grid grid-cols-1 gap-10 md:gap-2 md:grid-cols-2 md:px-[200px]">
         <div className=" w-full space-y-8 ">
           <h1
