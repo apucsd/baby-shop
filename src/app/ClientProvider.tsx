@@ -48,6 +48,13 @@ const ClientProvider = ({ children }: { children: ReactNode }) => {
               colorPrimaryActive: "#28948D",
               lineWidth: 10,
             },
+            DatePicker: {
+              colorPrimary: "#28948D",
+              colorPrimaryHover: "#28948D",
+              colorPrimaryActive: "#28948D",
+              colorBgContainer: "#F9F9F9",
+              borderRadius: 20,
+            },
           },
         }}
       >

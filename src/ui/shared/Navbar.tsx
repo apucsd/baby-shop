@@ -47,8 +47,8 @@ const Navbar = () => {
       path: "/statement",
     },
     {
-      label: "Story",
-      path: "/story",
+      label: "Blogs",
+      path: "/blogs",
     },
   ];
 

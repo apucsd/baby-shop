@@ -4,15 +4,15 @@ import React from "react";
 
 const AboutClient = () => {
   return (
-    <div className="container">
+    <div className="container my-20">
       <>
         {/* First Section - Our Story */}
-        <div className="flex flex-col w-full bg-secondary md:flex-row">
+        <div className="flex flex-col w-full  md:flex-row">
           <div className="flex flex-col items-center justify-start w-full p-5 md:w-1/2 lg:p-16 xl:p-24">
             <h2 className="w-full text-4xl font-light leading-tight text-primary md:text-3xl lg:text-4xl">
               The Story Behind Cove Valley Organic
             </h2>
-            <p className="max-w-lg mt-5 text-xl text-white md:text-base lg:text-xl xl:text-2xl">
+            <p className="max-w-lg mt-5 text-xl  md:text-base lg:text-xl xl:text-2xl">
               Cove Valley Organic was born from a simple idea: to nurture the
               next generation with the cleanest and healthiest food possible. As
               parents ourselves, we understand the importance of giving our
@@ -31,7 +31,7 @@ const AboutClient = () => {
         </div>
 
         {/* Second Section - Our Mission */}
-        <div className="flex flex-col  w-full bg-secondary md:flex-row">
+        <div className="flex flex-col  w-full  md:flex-row">
           <div className="w-full md:w-1/2">
             <img
               src="https://img.freepik.com/free-photo/team-businesspeople-meeting_23-2148824861.jpg?t=st=1728290132~exp=1728293732~hmac=42370f9cecfeb1f071ddb02b5359f4a53e2ab80fc49345028195999bf41a63b3&w=996"
@@ -43,7 +43,7 @@ const AboutClient = () => {
             <h2 className="max-w-lg text-4xl font-light leading-tight text-primary md:text-3xl lg:text-4xl">
               Our Mission: Nurture with Nature
             </h2>
-            <p className="max-w-lg mt-5 text-xl text-white md:text-base lg:text-xl xl:text-2xl">
+            <p className="max-w-lg mt-5 text-xl  md:text-base lg:text-xl xl:text-2xl">
               Our mission is simple: to provide babies with clean, organic food
               that is as close to nature as possible. We are passionate about
               sourcing the best organic ingredients, ensuring that every bite of
@@ -55,12 +55,12 @@ const AboutClient = () => {
         </div>
 
         {/* Third Section - Commitment to Sustainability */}
-        <div className="flex flex-col w-full bg-secondary md:flex-row">
+        <div className="flex flex-col w-full  md:flex-row">
           <div className="flex flex-col items-center justify-center w-full p-5 md:w-1/2 lg:p-16 xl:p-24">
             <h2 className="max-w-lg text-4xl font-light leading-tight text-primary md:text-3xl lg:text-4xl">
               Commitment to Organic and Sustainable Practices
             </h2>
-            <p className="max-w-lg mt-5 text-xl text-white md:text-base lg:text-xl xl:text-2xl">
+            <p className="max-w-lg mt-5 text-xl  md:text-base lg:text-xl xl:text-2xl">
               We are dedicated to not only providing high-quality organic baby
               food, but also ensuring that our production processes are
               environmentally friendly. From using sustainable farming practices

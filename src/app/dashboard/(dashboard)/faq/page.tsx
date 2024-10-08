@@ -67,9 +67,9 @@ const FaqPage = () => {
         {faqData.map((faq, index) => (
           <div
             key={index}
-            className="bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition-shadow duration-300 relative"
+            className="bg-white drop-shadow rounded-lg p-6 h transition-shadow duration-300 relative"
           >
-            <h3 className="text-xl  text-primary mb-2">{faq.question}</h3>
+            <h3 className="text-lg  text-primary mb-2">{faq.question}</h3>
             <p className="text-primary/60 mb-4">{faq.answer}</p>
 
             {/* Edit and Delete Icons */}
@@ -80,7 +80,7 @@ const FaqPage = () => {
                 onClick={() => setEditModal(true)}
               />
               <FiTrash
-                className="text-primary/40 hover:text-red-600 cursor-pointer"
+                className="text-red-600 hover:text-red-600 cursor-pointer"
                 size={20}
                 onClick={() => handleDelete(index)}
               />

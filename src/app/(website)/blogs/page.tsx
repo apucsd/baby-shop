@@ -1,43 +1,18 @@
 import Title from "@/ui/shared/Title";
-import { Button } from "antd";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { GoArrowUpRight } from "react-icons/go";
 
-const Blogs = () => {
+const AllBlogs = () => {
   return (
-    <div className="container my-5">
+    <div className="container my-20">
       <Title
         title="Our Blogs"
         subtitle="Discover insights, tips, and stories for a healthier lifestyle."
       />
-      <div className="flex items-center justify-end my-10">
-        <Link href={"/blogs"}>
-          <Button
-            className="group"
-            iconPosition="end"
-            icon={
-              <GoArrowUpRight
-                className="group-hover:rotate-45 duration-300"
-                size={20}
-              />
-            }
-            style={{
-              height: 42,
-              fontWeight: 500,
-              textTransform: "uppercase",
-            }}
-            shape="round"
-            type="primary"
-          >
-            See All
-          </Button>
-        </Link>
-      </div>
 
       <div className="grid md:grid-cols-3 gap-6">
-        {[1, 2, 3].map((item: any, index: any) => {
+        {[1, 2, 3, 4, 5, 6].map((item: any, index: any) => {
           return (
             <div key={index} className="rounded-md">
               <div className="relative">
@@ -73,4 +48,4 @@ const Blogs = () => {
   );
 };
 
-export default Blogs;
+export default AllBlogs;
